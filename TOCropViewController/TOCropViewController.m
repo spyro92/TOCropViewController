@@ -325,12 +325,6 @@ typedef NS_ENUM(NSInteger, TOCropViewControllerAspectRatio) {
             return;
     }
     
-    if (self.cropView.cropBoxAspectRatioIsPortrait) {
-        CGFloat width = aspectRatio.width;
-        aspectRatio.width = aspectRatio.height;
-        aspectRatio.height = width;
-    }
-    
     [self.cropView setAspectLockEnabledWithAspectRatio:aspectRatio animated:YES];
     self.toolbar.clampButtonGlowing = YES;
 }
